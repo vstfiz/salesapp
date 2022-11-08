@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:salesapp/custom/tab_button/tab_button.dart';
-import 'package:salesapp/utils/colors.dart';
-import 'package:salesapp/view/about_us/about_us.dart';
-import 'package:salesapp/view/home/home.dart';
-
 import '../../current_state.dart';
 import '../../custom/sidebar/sidebar.dart';
 import '../../utils/screen_utils.dart';
@@ -12,10 +7,10 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,20 +19,20 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Stack(
         children: [
           Positioned(
-            left: 0.0,
-            top: 0.0,
-            child: Container(
-              width: ScreenUtils.width / 23,
-              height: ScreenUtils.height,
-              color: Color(0xFF32323d),
-              child: SideBar(),
-          )),
+              left: 0.0,
+              top: 0.0,
+              child: Container(
+                width: ScreenUtils.width / 23,
+                height: ScreenUtils.height,
+                color: Color(0xFF32323d),
+                child: SideBar(),
+              )),
           Positioned(
               left: ScreenUtils.width / 23,
               right: 0.0,
               top: 0.0,
               child: Container(
-                width: ScreenUtils.width * 22/ 19,
+                width: ScreenUtils.width * 22 / 23,
                 height: ScreenUtils.height,
                 child: PageView.builder(
                   scrollDirection: Axis.vertical,
