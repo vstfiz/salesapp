@@ -27,9 +27,14 @@ class _WithCategoryState extends State<WithCategory> {
   }
 
   void getData() async {
-    await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategory(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase(),CurrentState.selectedCategory);
+    await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategory(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase(),CurrentState.tabs[CurrentState.selectedIndex].categories.first.name);
   }
-
+  void getCustomData(String type,String category) async {
+    await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategory(type.toLowerCase(),category);
+  }
+  void getCustomSubCategoryData(String type,String category,String subCategory) async {
+    await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategoryAndSubCategory(type.toLowerCase(),category,subCategory);
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +105,7 @@ class _WithCategoryState extends State<WithCategory> {
                                   : Row(
                                       children: [
                                         GestureDetector(
-                                          onTap: () {
+                                          onTap: () async{
                                             setState(() {
                                               CurrentState.selectedCategory =
                                                   CurrentState
@@ -109,7 +114,9 @@ class _WithCategoryState extends State<WithCategory> {
                                                       .categories[index]
                                                       .name;
                                             });
-                                            getData();
+                                            getCustomData( CurrentState
+                                                .tabs[CurrentState
+                                                .selectedIndex].title,CurrentState.selectedCategory);
                                           },
                                           child: HoverContainer(
                                             color: Colors.white,
@@ -229,7 +236,9 @@ class _WithCategoryState extends State<WithCategory> {
                                                 .subCategories[index]
                                                 .codename;
                                       });
-                                      getData();
+                                      getCustomSubCategoryData(CurrentState
+                                          .tabs[
+                                      CurrentState.selectedIndex].title.toLowerCase(),CurrentState.selectedCategory,CurrentState.selectedSubCategory);
                                     },
                                     child: HoverContainer(
                                       color: Colors.white,
