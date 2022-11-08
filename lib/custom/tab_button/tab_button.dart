@@ -34,25 +34,28 @@ class _SideBarTabState extends State<SideBarTab> {
       color: widget.index==CurrentState.selectedIndex?ColorPallete.hoveringBlue.withOpacity(0.5):Colors.transparent,
         hoverColor: ColorPallete.hoveringBlue.withOpacity(0.3),
         width: ScreenUtils.width / 23,
-        height: ScreenUtils.height / 15,
+        // height: ScreenUtils.height / 15,
         child:
-         Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              FaIcon(widget.icon,size: ScreenUtils.getWidth(16),color: ColorPallete.satinSheenGold,),
-              SizedBox(height: 5.0,),
-              Text(
-                widget.title,
-                textAlign: TextAlign.center,
-                style:  TextStyle(
-                    fontSize: CurrentState.selectedIndex==widget.index?10:11,
-                    fontWeight: CurrentState.selectedIndex==widget.index?FontWeight.w500:FontWeight.w400,
-                    color:ColorPallete.satinSheenGold
-                ),
-              )
-            ],
-          ),
+         Padding(
+           padding:  EdgeInsets.symmetric(vertical: ScreenUtils.getHeight(10)),
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                FaIcon(widget.icon,size: ScreenUtils.getWidth(16),color: ColorPallete.satinSheenGold,),
+                SizedBox(height: 5.0,),
+                Text(
+                  widget.title,
+                  textAlign: TextAlign.center,
+                  style:  TextStyle(
+                      fontSize: CurrentState.selectedIndex==widget.index?10:11,
+                      fontWeight: CurrentState.selectedIndex==widget.index?FontWeight.w500:FontWeight.w400,
+                      color:ColorPallete.satinSheenGold
+                  ),
+                )
+              ],
+            ),
+         ),
     );
   }
 }

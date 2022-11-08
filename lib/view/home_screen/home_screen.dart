@@ -38,7 +38,6 @@ class HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.vertical,
                   controller: CurrentState.pageController,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 1,
                   itemBuilder: (BuildContext context, int index) {
                     return CurrentState.screens[index];
                   },

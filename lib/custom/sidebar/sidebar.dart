@@ -28,13 +28,28 @@ class _SideBarState extends State<SideBar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: List.generate(CurrentState.tabs.length, (index) {
           return GestureDetector(
-            onTap: () async{
+            onTap: () async {
               setState(() {
                 CurrentState.selectedIndex = index;
-                CurrentState.tabs[index].hasChild
-                    ? CurrentState.pageController.jumpToPage(0)
-                    : CurrentState.pageController.jumpToPage(1);
+                // CurrentState.pageController.jumpToPage(0);
+
               });
+              if(index == 0 || index == 1){
+                await Provider.of<ImageListProvider>(context,listen: false).getScreenImageMasterList(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
+                CurrentState.pageController.jumpToPage(0);
+                setState(() {
+
+                });
+
+              }
+              else{
+                CurrentState.pageController.jumpToPage(1);
+                // CurrentState.selectedCategory = CurrentState.tabs[index].categories[0].name;
+                // CurrentState.selectedSubCategory = 'GET';
+                await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategory(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase(),CurrentState.tabs[CurrentState.selectedIndex].categories.first.name);
+
+
+              }
 
             },
             child: SideBarTab(

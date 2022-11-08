@@ -17,8 +17,8 @@ import 'models/screen_image_master.dart';
 
 class CurrentState {
   static int selectedIndex = 0;
-  static String selectedCategory = CurrentState.tabs[CurrentState.selectedIndex].categories[2].name;
-  static String selectedSubCategory = CurrentState.tabs[CurrentState.selectedIndex].subCategories[2].codename;
+  static String selectedCategory = CurrentState.tabs[CurrentState.selectedIndex].categories[0].name;
+  static String selectedSubCategory = 'GET';
   static List<SideBarTab> tabs = [
     SideBarTab(
       icon: FontAwesomeIcons.house,
@@ -191,6 +191,7 @@ class CurrentState {
         Category('IngersRoll Rand',FontAwesomeIcons.lockOpen)
       ],
       subCategories:  [
+        SubCategory('GET', 'GET',FontAwesomeIcons.house),
         SubCategory('Hydraulics (Spares & Assy)', 'Hydraulics',FontAwesomeIcons.house),
         SubCategory('Engine (Spares & Assy)', 'Engine',FontAwesomeIcons.house),
         SubCategory('Filters', 'Filters',FontAwesomeIcons.house),
@@ -220,6 +221,7 @@ class CurrentState {
         Category('Klemann',FontAwesomeIcons.house),
       ],
       subCategories: [
+        SubCategory('GET', 'GET',FontAwesomeIcons.house),
         SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts',FontAwesomeIcons.house),
         SubCategory('Belts', 'Belts',FontAwesomeIcons.house),
         SubCategory('Cone Mantle', 'Cone Mantle',FontAwesomeIcons.house),
@@ -251,6 +253,7 @@ class CurrentState {
         Category('Greaves Cotton',FontAwesomeIcons.house),
       ],
       subCategories: [
+        SubCategory('GET', 'GET',FontAwesomeIcons.house),
         SubCategory('Engine', 'Engine',FontAwesomeIcons.house),
         SubCategory('Hydraulics (Pump / Motor/ Gear Box)', 'Hydraulics',FontAwesomeIcons.lockOpen)
       ],
