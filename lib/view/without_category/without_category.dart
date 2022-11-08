@@ -50,7 +50,7 @@ class _WithoutCategoryState extends State<WithoutCategory> {
                     width: ScreenUtils.width * 22 / 23,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(i.imageUrl ?? Images.bedroom,headers: ImageService.headers),
+                            image: NetworkImage("https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,headers: ImageService.headers),
                             fit: BoxFit.cover)),
                   ),
                   Positioned(

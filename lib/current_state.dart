@@ -270,5 +270,5 @@ class CurrentState {
 
   static var screens = [const WithoutCategory(),const WithCategory()];
 
-  static PageController pageController = PageController(initialPage: 0);
+  static PageController pageController = PageController(initialPage: 0,keepPage: false);
 }

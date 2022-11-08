@@ -32,8 +32,8 @@ class _SideBarState extends State<SideBar> {
               setState(() {
                 CurrentState.selectedIndex = index;
                 CurrentState.tabs[index].hasChild
-                    ? CurrentState.pageController.jumpToPage(1)
-                    : CurrentState.pageController.jumpToPage(0);
+                    ? CurrentState.pageController.jumpToPage(0)
+                    : CurrentState.pageController.jumpToPage(1);
                 // CurrentState.pageController.jumpToPage(index);
               });
 

@@ -61,7 +61,7 @@ class _WithCategoryState extends State<WithCategory> {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: NetworkImage(
-                                          i.imageUrl ?? Images.bedroom,
+                                          "https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,
                                           headers: ImageService.headers),
                                       fit: BoxFit.cover)),
                             ),
