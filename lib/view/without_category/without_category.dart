@@ -6,6 +6,7 @@ import 'package:salesapp/utils/screen_utils.dart';
 import '../../current_state.dart';
 import '../../providers/ImageProvider.dart';
 import '../../services/image_service.dart';
+import '../../utils/colors.dart';
 import '../../utils/images.dart';
 
 class WithoutCategory extends StatefulWidget {
@@ -57,9 +58,9 @@ class _WithoutCategoryState extends State<WithoutCategory> {
                     bottom: ScreenUtils.getHeight(40),
                     child: Text(
                       i.textOnImage ?? 'Imagine. Do',
-                      style: const TextStyle(
+                      style:  TextStyle(
                           fontSize: 40,
-                          color: Colors.white,
+                          color:  ColorPallete.midnightGreen,
                           fontWeight: FontWeight.w600),
                     ),
                   )

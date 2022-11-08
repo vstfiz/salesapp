@@ -140,8 +140,8 @@ class _WithCategoryState extends State<WithCategory> {
                                                 ),
                                                 Text(
                                                   CurrentState
-                                                      .tabs[CurrentState
-                                                          .selectedIndex]
+                                                      .tabs.elementAt(CurrentState
+                                                      .selectedIndex)
                                                       .categories[index]
                                                       .name,
                                                   textAlign: TextAlign.center,
@@ -149,8 +149,8 @@ class _WithCategoryState extends State<WithCategory> {
                                                       fontSize: CurrentState
                                                                   .selectedCategory ==
                                                               CurrentState
-                                                                  .tabs[CurrentState
-                                                                      .selectedIndex]
+                                                                  .tabs.elementAt(CurrentState
+                                                                  .selectedIndex)
                                                                   .categories[
                                                                       index]
                                                                   .name
@@ -159,8 +159,8 @@ class _WithCategoryState extends State<WithCategory> {
                                                       fontWeight: CurrentState
                                                                   .selectedCategory ==
                                                               CurrentState
-                                                                  .tabs[CurrentState
-                                                                      .selectedIndex]
+                                                                  .tabs.elementAt(CurrentState
+                                                                  .selectedIndex)
                                                                   .categories[
                                                                       index]
                                                                   .name
