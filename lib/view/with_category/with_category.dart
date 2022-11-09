@@ -67,7 +67,7 @@ class _WithCategoryState extends State<WithCategory> {
                                       image: NetworkImage(
                                           "https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,
                                           headers: ImageService.headers),
-                                      fit: BoxFit.cover)),
+                                      fit: BoxFit.contain)),
                             ),
                             Positioned(
                               bottom: ScreenUtils.getHeight(40),
