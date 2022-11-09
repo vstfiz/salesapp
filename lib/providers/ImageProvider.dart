@@ -23,4 +23,9 @@ class ImageListProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> getImageMasterListByType(String type) async {
+    imageMasterList = await ImageService.getImagesByType(type: type);
+    notifyListeners();
+  }
+
 }

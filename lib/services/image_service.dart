@@ -30,7 +30,22 @@ class ImageService {
     }
     return imageList;
   }
-
+  static Future<List<ImageMaster>> getImagesByType(
+      {required String type}) async {
+    Map<String, dynamic> parameters = {
+      "type": type
+    };
+    GenericResponse response = await HTTPService.callApi(
+        HttpRequestType.get, URL.getImageByType,
+        params: parameters, headers: headers);
+    List<ImageMaster> imageList = [];
+    if (response.data.isNotEmpty) {
+      for (var element in response.data) {
+        imageList.add(ImageMaster.fromJson(element));
+      }
+    }
+    return imageList;
+  }
   static Future<List<ImageMaster>> getImagesByTypeAndCategory(
       {required String type, required String category}) async {
     Map<String, dynamic> parameters = {

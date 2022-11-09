@@ -4,6 +4,7 @@ class URL{
 
   static const String type = "$baseUrl/type";
   static const String getImageByScreenName = "$image/getByCode";
+  static const String getImageByType = "$type/getByType";
   static const String getImageByTypeAndCategory = "$type/getByTypeAndCategory";
   static const String getImageByTypeAndCategoryAndSubCategory = "$type/getByTypeAndCategoryAndSubCategory";
 

@@ -46,7 +46,7 @@ class _SideBarState extends State<SideBar> {
                 CurrentState.pageController.jumpToPage(1);
                 // CurrentState.selectedCategory = CurrentState.tabs[index].categories[0].name;
                 // CurrentState.selectedSubCategory = 'GET';
-                await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByTypeAndCategory(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase(),CurrentState.tabs[CurrentState.selectedIndex].categories.first.name);
+                await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByType(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
 
 
               }
