@@ -1,4 +1,4 @@
-package com.yantralive.salesapp.salesapp
+package com.yantralive.salesapp
 
 import io.flutter.embedding.android.FlutterActivity
 

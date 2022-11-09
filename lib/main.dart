@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:salesapp/utils/LandscapeModeMixin.dart';
 import 'package:salesapp/utils/screen_utils.dart';
 import 'package:salesapp/view/home_screen/home_screen.dart';
 import 'package:salesapp/providers/ImageProvider.dart';
@@ -12,9 +13,8 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with LandscapeModeMixin{
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
         ScreenUtils.width = constraints.maxWidth;
         return MaterialApp(
             color: Colors.white,
-            title: 'Yantra Sales App',
+            title: 'Yantralive Sales App',
             theme: ThemeData(
               primarySwatch: Colors.lightBlue,
             ),
+            debugShowCheckedModeBanner: false,
             home: const HomeScreen());
       });
     });
