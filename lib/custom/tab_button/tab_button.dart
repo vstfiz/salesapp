@@ -42,7 +42,7 @@ class _SideBarTabState extends State<SideBarTab> {
              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                FaIcon(widget.icon,size: ScreenUtils.getWidth(16),color: ColorPallete.satinSheenGold,),
+                FaIcon(widget.icon,size: ScreenUtils.getWidth(26),color: ColorPallete.satinSheenGold,),
                 SizedBox(height: 5.0,),
                 Text(
                   widget.title,

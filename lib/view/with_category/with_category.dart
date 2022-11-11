@@ -127,7 +127,7 @@ class _WithCategoryState extends State<WithCategory> {
                                                       .selectedIndex)
                                                       .categories[
                                                   index]
-                                                      .name?ColorPallete.hoveringBlue.withAlpha(70):Colors.white,
+                                                      .name?ColorPallete.hoveringBlue.withAlpha(70):Color.fromARGB(255, 252, 185, 0),
                                               hoverColor: ColorPallete
                                                   .hoveringBlue
                                                   .withAlpha(70),
@@ -208,15 +208,14 @@ class _WithCategoryState extends State<WithCategory> {
                       });
                     },
                     child: Container(
-                      height: ScreenUtils.getWidth(20),
-                      width: ScreenUtils.getWidth(20),
+                      padding: EdgeInsets.all(2),
                       decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.5),
+                          color: Color.fromARGB(255, 12, 74, 97),
                           borderRadius: BorderRadius.circular(5),
                           border: Border.all(color: Colors.black, width: 1.5)),
                       child: const Icon(
                         Icons.menu,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 185, 0),
                         size: 24,
                       ),
                     ),
@@ -259,7 +258,7 @@ class _WithCategoryState extends State<WithCategory> {
                                                 .selectedIndex)
                                                 .subCategories[
                                             index]
-                                                .codename?ColorPallete.hoveringBlue.withOpacity(0.7):Colors.white,
+                                                .codename?ColorPallete.hoveringBlue.withOpacity(0.7):Color.fromARGB(255, 252, 185, 0),
                                         hoverColor: ColorPallete.hoveringBlue
                                             .withOpacity(0.7),
                                         width: ScreenUtils.width / 23,

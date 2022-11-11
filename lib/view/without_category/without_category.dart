@@ -59,8 +59,8 @@ class _WithoutCategoryState extends State<WithoutCategory> {
                     child: Text(
                       i.textOnImage ?? 'Imagine. Do',
                       style:  TextStyle(
-                          fontSize: 40,
-                          color:  ColorPallete.midnightGreen,
+                          fontSize: ScreenUtils.width * 0.028,
+                          color:  Color.fromARGB(255, 12, 74, 97),
                           fontWeight: FontWeight.w600),
                     ),
                   )
