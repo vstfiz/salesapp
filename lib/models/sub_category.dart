@@ -5,13 +5,13 @@ class SubCategory{
    String _name;
    String _codename;
 
-   IconData _icon;
+   String _icon;
 
    SubCategory(this._name, this._codename, this._icon);
 
-   IconData get icon => _icon;
+   String get icon => _icon;
 
-  set icon(IconData value) {
+  set icon(String value) {
     _icon = value;
   }
 

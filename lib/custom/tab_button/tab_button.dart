@@ -10,7 +10,7 @@ import '../../models/category.dart';
 import '../../utils/screen_utils.dart';
 
 class SideBarTab extends StatefulWidget {
-  final IconData icon;
+  final String icon;
   final int index;
   final String title;
   final bool hasChild;
@@ -21,7 +21,7 @@ class SideBarTab extends StatefulWidget {
   final List<SubCategory> subCategories;
 
   const SideBarTab(
-      {super.key,required this.index, required this.icon, required this.title, required this.hasChild, required this.height, required this.width, required this.textStyle, required this.categories, required this.subCategories});
+      {super.key,required this.index,  this.icon="", required this.title, required this.hasChild, required this.height, required this.width, required this.textStyle, required this.categories, required this.subCategories});
 
   @override
   _SideBarTabState createState()=> _SideBarTabState();
@@ -42,7 +42,7 @@ class _SideBarTabState extends State<SideBarTab> {
              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                FaIcon(widget.icon,size: ScreenUtils.getWidth(16),color: ColorPallete.satinSheenGold,),
+                Image.asset(widget.icon,width: ScreenUtils.getWidth(26)),
                 SizedBox(height: 5.0,),
                 Text(
                   widget.title,

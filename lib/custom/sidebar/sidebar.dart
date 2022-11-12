@@ -23,9 +23,8 @@ class _SideBarState extends State<SideBar> {
       color: Colors.white,
       height: ScreenUtils.height,
       width: ScreenUtils.width / 23,
-      child: Column(
-
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: ListView(
+        scrollDirection: Axis.vertical,
         children: List.generate(CurrentState.tabs.length, (index) {
           return GestureDetector(
             onTap: () async {

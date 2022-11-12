@@ -52,15 +52,15 @@ class _WithoutCategoryState extends State<WithoutCategory> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage("https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,headers: ImageService.headers),
-                            fit: BoxFit.contain)),
+                            fit: BoxFit.cover)),
                   ),
                   Positioned(
                     bottom: ScreenUtils.getHeight(40),
                     child: Text(
                       i.textOnImage ?? 'Imagine. Do',
                       style:  TextStyle(
-                          fontSize: 40,
-                          color:  ColorPallete.midnightGreen,
+                          fontSize: ScreenUtils.width * 0.028,
+                          color:  Color.fromARGB(255, 12, 74, 97),
                           fontWeight: FontWeight.w600),
                     ),
                   )
