@@ -195,7 +195,6 @@ class CurrentState {
         topMenuItems['JCB']!,
         topMenuItems['Sany']!,
         topMenuItems['HAMM']!,
-        topMenuItems['HAMM']!,
         topMenuItems['IngersRoll Rand']!,
 
       ],

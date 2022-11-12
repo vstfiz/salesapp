@@ -165,7 +165,7 @@ class _WithCategoryState extends State<WithCategory> {
                                               TextAlign.center,
                                               style:  TextStyle(
                                                   fontSize:
-                                                  14,
+                                                  12,
                                                   fontWeight:
                                                   FontWeight
                                                       .w500,
@@ -251,7 +251,7 @@ class _WithCategoryState extends State<WithCategory> {
                                                       .tabs[CurrentState
                                                           .selectedIndex]
                                                       .subCategories[index]
-                                                      ?.codename ??
+                                                      .codename ??
                                                   'GET';
                                         });
                                         getCustomSubCategoryData(
