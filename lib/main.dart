@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget with LandscapeModeMixin{
       return OrientationBuilder(builder: (context, orientation) {
         ScreenUtils.height = constraints.maxHeight;
         ScreenUtils.width = constraints.maxWidth;
+        print(ScreenUtils.width);
+        print(ScreenUtils.height);
         return MaterialApp(
             color: Colors.white,
             title: 'Yantralive Sales App',

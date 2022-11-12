@@ -7,5 +7,6 @@ class ColorPallete {
 
   static Color satinSheenGold = const Color(0xFF0D4A61);
 
-  static Color hoveringBlue = const Color(0xFF23527c);
+  static Color hoveringBlue = Color.fromARGB(
+      255, 252, 185, 0);
 }

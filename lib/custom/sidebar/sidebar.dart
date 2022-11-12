@@ -20,12 +20,11 @@ class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 252, 185, 0),
+      color: Colors.white,
       height: ScreenUtils.height,
       width: ScreenUtils.width / 23,
-      child: Column(
-
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: ListView(
+        scrollDirection: Axis.vertical,
         children: List.generate(CurrentState.tabs.length, (index) {
           return GestureDetector(
             onTap: () async {

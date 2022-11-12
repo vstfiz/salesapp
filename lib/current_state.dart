@@ -22,7 +22,7 @@ class CurrentState {
   static String selectedSubCategory = 'GETs';
   static List<SideBarTab> tabs = [
     SideBarTab(
-      icon: FontAwesomeIcons.house,
+      icon: "images/sidebar/home.png",
       title: 'Homepage',
       hasChild: false,
       height: ScreenUtils.width / 23,
@@ -37,7 +37,7 @@ class CurrentState {
       subCategories: const [],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.addressBook,
+      icon: "images/sidebar/offers.png",
       title: 'Offers',
       hasChild: false,
       height: ScreenUtils.width / 23,
@@ -52,7 +52,7 @@ class CurrentState {
       subCategories: const [],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.gamepad,
+      icon: "images/sidebar/Excavator.png",
       title: 'Excavator',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -65,30 +65,27 @@ class CurrentState {
       ),
       index: 2,
       categories: [
-        Category('Kobelco', FontAwesomeIcons.lockOpen),
-        Category('Caterpillar', FontAwesomeIcons.lockOpen),
-        Category('Volvo', FontAwesomeIcons.lockOpen),
-        Category('Komatsu', FontAwesomeIcons.house),
-        Category('Tata Hitachi', FontAwesomeIcons.lockOpen),
-        Category('Hyundai', FontAwesomeIcons.house),
-        Category('JCB', FontAwesomeIcons.house),
-        Category('Sany', FontAwesomeIcons.lockOpen)
+        topMenuItems['Kobelco']!,
+        topMenuItems['Caterpillar']!,
+        topMenuItems['Volvo']!,
+        topMenuItems['Komatsu']!,
+        topMenuItems['Tata Hitachi']!,
+        topMenuItems['Hyundai']!,
+        topMenuItems['JCB']!,
+        topMenuItems['Sany']!
       ],
       subCategories: [
-        SubCategory('GETs', 'GETs', FontAwesomeIcons.house),
-        SubCategory(
-            'Hydraulics (Spares & Assy)', 'Hydraulics', FontAwesomeIcons.house),
-        SubCategory('Engine (Spares & Assy)', 'Engine', FontAwesomeIcons.house),
-        SubCategory('UCG', 'UCG', FontAwesomeIcons.house),
-        SubCategory('Filters', 'Filters', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.house),
-        SubCategory('Pin & Brushes', 'Pin & Brushes', FontAwesomeIcons.house),
-        SubCategory('Others', 'Others', FontAwesomeIcons.lockOpen),
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
+        rightMenuItems['UCG']!,
+        rightMenuItems['Filters']!,
+        rightMenuItems['Lubricants']!,
+        rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['Others']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.galacticRepublic,
+      icon: "images/sidebar/backloader.png",
       title: 'Loaders',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -101,29 +98,26 @@ class CurrentState {
       ),
       index: 3,
       categories: [
-        Category('Kobelco', FontAwesomeIcons.house),
-        Category('Caterpillar', FontAwesomeIcons.house),
-        Category('Volvo', FontAwesomeIcons.house),
-        Category('Komatsu', FontAwesomeIcons.house),
-        Category('Tata Hitachi', FontAwesomeIcons.house),
-        Category('Hyundai', FontAwesomeIcons.house),
-        Category('JCB', FontAwesomeIcons.house),
-        Category('Sany', FontAwesomeIcons.lockOpen)
+        topMenuItems['Kobelco']!,
+        topMenuItems['Caterpillar']!,
+        topMenuItems['Volvo']!,
+        topMenuItems['Komatsu']!,
+        topMenuItems['Tata Hitachi']!,
+        topMenuItems['Hyundai']!,
+        topMenuItems['JCB']!,
+        topMenuItems['Sany']!
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory(
-            'Hydraulics (Spares & Assy)', 'Hydraulics', FontAwesomeIcons.house),
-        SubCategory('Engine (Spares & Assy)', 'Engine', FontAwesomeIcons.house),
-        SubCategory('Filters', 'Filters', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.house),
-        SubCategory('Pin & Brushes', 'Pin & Brushes', FontAwesomeIcons.house),
-        SubCategory('Others (Hoses/Electrical/Body Parts/Cabin Parts)',
-            'Others', FontAwesomeIcons.lockOpen)
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
+        rightMenuItems['Filters']!,
+        rightMenuItems['Lubricants']!,
+        rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['Others']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.tachographDigital,
+      icon: "images/sidebar/Grader.png",
       title: 'Grader',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -136,27 +130,24 @@ class CurrentState {
       ),
       index: 4,
       categories: [
-        Category('Caterpillar', FontAwesomeIcons.house),
-        Category('Volvo', FontAwesomeIcons.house),
-        Category('Komatsu', FontAwesomeIcons.house),
-        Category('XCMG', FontAwesomeIcons.house),
-        Category('Leeboy', FontAwesomeIcons.house),
-        Category('Liugong', FontAwesomeIcons.house),
-        Category('BEML', FontAwesomeIcons.lockOpen)
+        topMenuItems['Caterpillar']!,
+        topMenuItems['Volvo']!,
+        topMenuItems['Komatsu']!,
+        topMenuItems['XCMG']!,
+        topMenuItems['Leeboy']!,
+        topMenuItems['Liugong']!,
+        topMenuItems['BEML']!,
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory(
-            'Hydraulics (Spares & Assy)', 'Hydraulics', FontAwesomeIcons.house),
-        SubCategory('Engine (Spares & Assy)', 'Engine', FontAwesomeIcons.house),
-        SubCategory('Filters', 'Filters', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.house),
-        SubCategory('Others (Hoses/Electrical/Body Parts/Cabin Parts)',
-            'Others', FontAwesomeIcons.lockOpen)
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
+        rightMenuItems['Filters']!,
+        rightMenuItems['Lubricants']!,
+        rightMenuItems['Others']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.rainbow,
+      icon: "images/sidebar/Bulldozer.png",
       title: 'Dozer',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -169,24 +160,22 @@ class CurrentState {
       ),
       index: 5,
       categories: [
-        Category('Caterpillar', FontAwesomeIcons.house),
-        Category('Komatsu', FontAwesomeIcons.house),
-        Category('BEML', FontAwesomeIcons.lockOpen)
+        topMenuItems['Caterpillar']!,
+        topMenuItems['Komatsu']!,
+        topMenuItems['BEML']!
+
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory(
-            'Hydraulics (Spares & Assy)', 'Hydraulics', FontAwesomeIcons.house),
-        SubCategory('Engine (Spares & Assy)', 'Engine', FontAwesomeIcons.house),
-        SubCategory('UCG', 'UCG', FontAwesomeIcons.house),
-        SubCategory('Filters', 'Filters', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.house),
-        SubCategory('Others (Hoses/Electrical/Body Parts/Cabin Parts)',
-            'Others', FontAwesomeIcons.lockOpen)
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
+        rightMenuItems['UCG']!,
+        rightMenuItems['Filters']!,
+        rightMenuItems['Lubricants']!,
+        rightMenuItems['Others']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.dashcube,
+      icon: "images/sidebar/Roller.png",
       title: 'Rollers',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -199,28 +188,27 @@ class CurrentState {
       ),
       index: 6,
       categories: [
-        Category('Caterpillar', FontAwesomeIcons.house),
-        Category('Volvo', FontAwesomeIcons.house),
-        Category('L&T', FontAwesomeIcons.house),
-        Category('Case', FontAwesomeIcons.house),
-        Category('JCB', FontAwesomeIcons.house),
-        Category('Sany', FontAwesomeIcons.house),
-        Category('HAMM', FontAwesomeIcons.house),
-        Category('IngersRoll Rand', FontAwesomeIcons.lockOpen)
+        topMenuItems['Caterpillar']!,
+        topMenuItems['Volvo']!,
+        topMenuItems['L&T']!,
+        topMenuItems['Case']!,
+        topMenuItems['JCB']!,
+        topMenuItems['Sany']!,
+        topMenuItems['HAMM']!,
+        topMenuItems['HAMM']!,
+        topMenuItems['IngersRoll Rand']!,
+
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory(
-            'Hydraulics (Spares & Assy)', 'Hydraulics', FontAwesomeIcons.house),
-        SubCategory('Engine (Spares & Assy)', 'Engine', FontAwesomeIcons.house),
-        SubCategory('Filters', 'Filters', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.house),
-        SubCategory('Others (Hoses/Electrical/Body Parts/Cabin Parts)',
-            'Others', FontAwesomeIcons.lockOpen)
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
+        rightMenuItems['Filters']!,
+        rightMenuItems['Lubricants']!,
+        rightMenuItems['Others']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.paintbrush,
+      icon: "images/sidebar/Crusher.png",
       title: 'Crushers',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -233,27 +221,23 @@ class CurrentState {
       ),
       index: 7,
       categories: [
-        Category('Puzzolona', FontAwesomeIcons.house),
-        Category('Propel', FontAwesomeIcons.house),
-        Category('Metso', FontAwesomeIcons.house),
-        Category('Sandvik', FontAwesomeIcons.house),
-        Category('JCB', FontAwesomeIcons.house),
-        Category('Writgen', FontAwesomeIcons.house),
-        Category('Klemann', FontAwesomeIcons.house),
+        topMenuItems['Puzzolona']!,
+        topMenuItems['Propel']!,
+        topMenuItems['Metso']!,
+        topMenuItems['Sandvik']!,
+        topMenuItems['Writgen']!,
+        topMenuItems['Klemann']!,
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts',
-            FontAwesomeIcons.house),
-        SubCategory('Belts', 'Belts', FontAwesomeIcons.house),
-        SubCategory('Cone Mantle', 'Cone Mantle', FontAwesomeIcons.house),
-        SubCategory(
-            'Conveyer Rollers', 'Conveyer Rollers', FontAwesomeIcons.house),
-        SubCategory('Lubricants', 'Lubricants', FontAwesomeIcons.lockOpen)
+        rightMenuItems['Wear Parts']!,
+        rightMenuItems['Belts']!,
+        rightMenuItems['Cone Mantle']!,
+        rightMenuItems['Conveyer Rollers']!,
+        rightMenuItems['Lubricants']!,
       ],
     ),
     SideBarTab(
-      icon: FontAwesomeIcons.landMineOn,
+      icon: "images/sidebar/Tipper.png",
       title: 'Trippers / \n Transit Mixers',
       hasChild: true,
       height: ScreenUtils.width / 23,
@@ -266,42 +250,74 @@ class CurrentState {
       ),
       index: 8,
       categories: [
-        Category('Tata', FontAwesomeIcons.house),
-        Category('Ashok Leyland', FontAwesomeIcons.house),
-        Category('Benz', FontAwesomeIcons.house),
-        Category('Eicher', FontAwesomeIcons.house),
-        Category('Scania / Ajax Fiori', FontAwesomeIcons.house),
-        Category('Putzmister', FontAwesomeIcons.house),
-        Category('Sany', FontAwesomeIcons.house),
-        Category('Schwing Setter', FontAwesomeIcons.house),
-        Category('Greaves Cotton', FontAwesomeIcons.house),
+        topMenuItems['Tata']!,
+        topMenuItems['Ashok Leyland']!,
+        topMenuItems['Benz']!,
+        topMenuItems['Scania / Ajax Fiori']!,
+        topMenuItems['Putzmister']!,
+        topMenuItems['Sany']!,
+        topMenuItems['Schwing Stetter']!,
+        topMenuItems['Greaves Cotton']!,
       ],
       subCategories: [
-        SubCategory('GET', 'GET', FontAwesomeIcons.house),
-        SubCategory('Engine', 'Engine', FontAwesomeIcons.house),
-        SubCategory('Hydraulics (Pump / Motor/ Gear Box)', 'Hydraulics',
-            FontAwesomeIcons.lockOpen)
+        rightMenuItems['Hydraulics']!,
+        rightMenuItems['Engine']!,
       ],
     ),
   ];
 
-  static List<ImageMaster> imagesWithCategory = [
-    ImageMaster(
-        imageUrl:
-            "https://yl-sales-app.s3.ap-south-1.amazonaws.com/SK210+Excavator+images/SK210.jpg",
-        textOnImage: ''),
-    ImageMaster(imageUrl: Images.bedroom, textOnImage: 'Truck 2'),
-    ImageMaster(imageUrl: Images.bedroom, textOnImage: 'Truck 3'),
-  ];
-  static List<ScreenImageMaster> imagesWithoutCategory = [
-    ScreenImageMaster(
-        imageUrl: "https://yl-sales-app.s3.ap-south-1.amazonaws.com/banner.jpg",
-        textOnImage: 'Hi Welcome to Yantralive'),
-    ScreenImageMaster(imageUrl: Images.bedroom, textOnImage: 'dsvfsdfvbdfbdfb'),
-    ScreenImageMaster(imageUrl: Images.bedroom, textOnImage: '345yrgt'),
-  ];
-
   static var screens = [const WithoutCategory(), const WithCategory()];
+
+  static Map<String, SubCategory> rightMenuItems = {
+    'Engine' : SubCategory('Engine', 'Engine', 'images/rightmenu/engine.png'),
+    'Hydraulics': SubCategory('Hydraulics (Pump / Motor/ Gear Box)', 'Hydraulics', 'images/rightmenu/hydraulics.png'),
+    'UCG' : SubCategory('UCG', 'UCG', ''),
+    'Filters' : SubCategory('Filters', 'Filters', 'images/rightmenu/filter.png'),
+    'Lubricants' : SubCategory('Lubricants', 'Lubricants', ''),
+    'Pin & Brushes' : SubCategory('Pin & Brushes', 'Pin & Brushes', 'images/rightmenu/pin_bushes.png'),
+    'Others' : SubCategory('Others', 'Others', 'images/rightmenu/others.png'),
+    'Wear Parts' : SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts',
+        ''),
+    'Belts' : SubCategory('Belts', 'Belts', ''),
+    'Cone Mantle' : SubCategory('Cone Mantle', 'Cone Mantle', ''),
+    'Conveyer Rollers' : SubCategory(
+        'Conveyer Rollers', 'Conveyer Rollers', '')
+
+  };
+
+  static Map<String, Category> topMenuItems = {
+    'Kobelco' : Category('Kobelco', ),
+    'Caterpillar' : Category('Caterpillar', icon:"images/topmenu/Cat.png"),
+    'Volvo' : Category('Volvo',icon:"images/topmenu/Volvo.png"),
+    'Komatsu' : Category('Komatsu', icon:"images/topmenu/Komatsu.png"),
+    'Tata Hitachi' : Category('Tata Hitachi', icon:"images/topmenu/Tata.png"),
+    'Hyundai' : Category('Hyundai', icon:"images/topmenu/Hyundai.png"),
+    'JCB' : Category('JCB', icon:"images/topmenu/JCB.png"),
+    'Sany' : Category('Sany', icon:"images/topmenu/Sany.png"),
+    'Tata' : Category('Tata', iconData:FontAwesomeIcons.house),
+    'Ashok Leyland' : Category('Ashok Leyland', iconData:FontAwesomeIcons.house),
+    'Benz' : Category('Benz', iconData:FontAwesomeIcons.house),
+    'Eicher' : Category('Eicher', iconData:FontAwesomeIcons.house),
+    'Scania / Ajax Fiori' : Category('Scania / Ajax Fiori', iconData:FontAwesomeIcons.house),
+    'Putzmister' : Category('Putzmister', iconData:FontAwesomeIcons.house),
+    'Schwing Stetter' : Category('Schwing Stetter', iconData:FontAwesomeIcons.house),
+    'Greaves Cotton' : Category('Greaves Cotton', iconData:FontAwesomeIcons.house),
+    'Puzzolona' : Category('Puzzolona', iconData:FontAwesomeIcons.house),
+    'Propel' : Category('Propel', iconData:FontAwesomeIcons.house),
+    'Metso' : Category('Metso', iconData:FontAwesomeIcons.house),
+    'Sandvik' : Category('Sandvik', iconData:FontAwesomeIcons.house),
+    'Writgen' : Category('Writgen', iconData:FontAwesomeIcons.house),
+    'Klemann' : Category('Klemann', iconData:FontAwesomeIcons.house),
+    'L&T' : Category('L&T', iconData:FontAwesomeIcons.house),
+    'Case' : Category('Case', iconData:FontAwesomeIcons.house),
+    'HAMM' : Category('HAMM', iconData:FontAwesomeIcons.house),
+    'IngersRoll Rand' : Category('IngersRoll Rand', iconData:FontAwesomeIcons.lockOpen),
+    'XCMG' : Category('XCMG', iconData:FontAwesomeIcons.house),
+    'Leeboy' : Category('Leeboy', iconData:FontAwesomeIcons.house),
+    'Liugong' : Category('Liugong', iconData:FontAwesomeIcons.house),
+    'BEML' : Category('BEML', iconData:FontAwesomeIcons.lockOpen)
+
+  };
 
   static PageController pageController =
       PageController(initialPage: 0, keepPage: false);

@@ -2,14 +2,15 @@ import 'package:flutter/cupertino.dart';
 
 class Category {
   String _name;
-  IconData _icon;
+  String icon;
+  IconData iconData;
 
-  Category(this._name, this._icon);
+  Category(this._name, {this.icon = "", this.iconData = const IconData(0)});
 
-  IconData get icon => _icon;
+  String get getIcon => icon;
 
-  set icon(IconData value) {
-    _icon = value;
+  set getIcon(String value) {
+    icon = value;
   }
 
   String get name => _name;
