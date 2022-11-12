@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:salesapp/utils/LandscapeModeMixin.dart';
 import 'package:salesapp/utils/screen_utils.dart';
@@ -7,6 +8,10 @@ import 'package:salesapp/providers/ImageProvider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
+  ]);
   runApp(MultiProvider(
     providers: [ChangeNotifierProvider(create: (_) => ImageListProvider())],
     child: const MyApp(),
