@@ -36,17 +36,12 @@ class _SideBarState extends State<SideBar> {
               if(index == 0 || index == 1){
                 await Provider.of<ImageListProvider>(context,listen: false).getScreenImageMasterList(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
                 CurrentState.pageController.jumpToPage(0);
-                setState(() {
-
-                });
-
               }
               else{
                 CurrentState.pageController.jumpToPage(1);
                 // CurrentState.selectedCategory = CurrentState.tabs[index].categories[0].name;
                 // CurrentState.selectedSubCategory = 'GET';
                 await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByType(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
-
 
               }
 

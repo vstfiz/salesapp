@@ -23,6 +23,7 @@ class WithCategory extends StatefulWidget {
 class _WithCategoryState extends State<WithCategory> {
   bool isRightMenuVisible = true;
 
+
   @override
   void initState() {
     super.initState();
@@ -111,6 +112,7 @@ class _WithCategoryState extends State<WithCategory> {
                                       .categories.length, (index) {
                                 return GestureDetector(
                                   onTap: () async {
+                                    await Provider.of<ImageListProvider>(context,listen: false).setTopMenuSelectedIndex(index);
                                     setState(() {
                                       CurrentState.selectedCategory =
                                           CurrentState
@@ -129,6 +131,7 @@ class _WithCategoryState extends State<WithCategory> {
                                   child: Container(
                                     color: ColorPallete.topMenu,
                                     child: HoverContainer(
+                                      color: imageList.topMenuSelectedIndex==index?ColorPallete.hoveringBlue.withOpacity(0.5):Colors.transparent,
                                       hoverColor: ColorPallete
                                           .hoveringBlue
                                           .withAlpha(70),
@@ -231,7 +234,8 @@ class _WithCategoryState extends State<WithCategory> {
                                 return Column(
                                   children: [
                                     GestureDetector(
-                                        onTap: () {
+                                        onTap: () async{
+                                          await Provider.of<ImageListProvider>(context,listen: false).setRightMenuSelectedIndex(index);
                                           setState(() {
                                             CurrentState.selectedSubCategory =
                                                 CurrentState
@@ -253,6 +257,7 @@ class _WithCategoryState extends State<WithCategory> {
                                         child: Container(
                                           color: ColorPallete.rightMenu,
                                           child: HoverContainer(
+                                            color: imageList.rightMenuSelectedIndex==index?ColorPallete.hoveringBlue.withOpacity(0.5):Colors.transparent,
                                             hoverColor: ColorPallete.hoveringBlue
                                                 .withOpacity(0.7),
                                             width: ScreenUtils.width / 23,
