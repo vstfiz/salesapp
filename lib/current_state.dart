@@ -302,13 +302,27 @@ class CurrentState {
     'Kobelco': Category(
       'Kobelco',
     ),
-    'Caterpillar': Category('Caterpillar', icon: "images/topmenu/Cat.png"),
-    'Volvo': Category('Volvo', icon: "images/topmenu/Volvo.png"),
-    'Komatsu': Category('Komatsu', icon: "images/topmenu/Komatsu.png"),
-    'Tata Hitachi': Category('Tata Hitachi', icon: "images/topmenu/Tata.png"),
-    'Hyundai': Category('Hyundai', icon: "images/topmenu/Hyundai.png"),
-    'JCB': Category('JCB', icon: "images/topmenu/JCB.png"),
-    'Sany': Category('Sany', icon: "images/topmenu/Sany.png"),
+    'Caterpillar': Category(
+      'Caterpillar',
+    ),
+    'Volvo': Category(
+      'Volvo',
+    ),
+    'Komatsu': Category(
+      'Komatsu',
+    ),
+    'Tata Hitachi': Category(
+      'Tata Hitachi',
+    ),
+    'Hyundai': Category(
+      'Hyundai',
+    ),
+    'JCB': Category(
+      'JCB',
+    ),
+    'Sany': Category(
+      'Sany',
+    ),
     'Tata': Category('Tata', iconData: FontAwesomeIcons.house),
     'Ashok Leyland':
         Category('Ashok Leyland', iconData: FontAwesomeIcons.house),

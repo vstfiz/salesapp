@@ -98,8 +98,9 @@ class _WithCategoryState extends State<WithCategory> {
                     ? const SizedBox()
                     : Positioned(
                         top: 0.0,
+                        right: 100,
                         child: Container(
-                          width: ScreenUtils.width * 0.8,
+                          width: ScreenUtils.width * 0.36,
                           height: ScreenUtils.width / 23,
                           child: SingleChildScrollView(
                             child: Row(
