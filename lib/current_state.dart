@@ -81,6 +81,8 @@ class CurrentState {
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
         rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
       ],
     ),
@@ -113,6 +115,8 @@ class CurrentState {
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
         rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
       ],
     ),
@@ -143,6 +147,8 @@ class CurrentState {
         rightMenuItems['Engine']!,
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
       ],
     ),
@@ -163,7 +169,6 @@ class CurrentState {
         topMenuItems['Caterpillar']!,
         topMenuItems['Komatsu']!,
         topMenuItems['BEML']!
-
       ],
       subCategories: [
         rightMenuItems['Hydraulics']!,
@@ -171,6 +176,8 @@ class CurrentState {
         rightMenuItems['UCG']!,
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
       ],
     ),
@@ -196,13 +203,14 @@ class CurrentState {
         topMenuItems['Sany']!,
         topMenuItems['HAMM']!,
         topMenuItems['IngersRoll Rand']!,
-
       ],
       subCategories: [
         rightMenuItems['Hydraulics']!,
         rightMenuItems['Engine']!,
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
       ],
     ),
@@ -233,6 +241,8 @@ class CurrentState {
         rightMenuItems['Cone Mantle']!,
         rightMenuItems['Conveyer Rollers']!,
         rightMenuItems['Lubricants']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
       ],
     ),
     SideBarTab(
@@ -261,6 +271,8 @@ class CurrentState {
       subCategories: [
         rightMenuItems['Hydraulics']!,
         rightMenuItems['Engine']!,
+        rightMenuItems['GET']!,
+        rightMenuItems['Seals']!,
       ],
     ),
   ];
@@ -268,54 +280,62 @@ class CurrentState {
   static var screens = [const WithoutCategory(), const WithCategory()];
 
   static Map<String, SubCategory> rightMenuItems = {
-    'Engine' : SubCategory('Engine', 'Engine', 'images/rightmenu/engine.png'),
-    'Hydraulics': SubCategory('Hydraulics (Pump / Motor/ Gear Box)', 'Hydraulics', 'images/rightmenu/hydraulics.png'),
-    'UCG' : SubCategory('UCG', 'UCG', ''),
-    'Filters' : SubCategory('Filters', 'Filters', 'images/rightmenu/filter.png'),
-    'Lubricants' : SubCategory('Lubricants', 'Lubricants', ''),
-    'Pin & Brushes' : SubCategory('Pin & Brushes', 'Pin & Brushes', 'images/rightmenu/pin_bushes.png'),
-    'Others' : SubCategory('Others', 'Others', 'images/rightmenu/others.png'),
-    'Wear Parts' : SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts',
-        ''),
-    'Belts' : SubCategory('Belts', 'Belts', ''),
-    'Cone Mantle' : SubCategory('Cone Mantle', 'Cone Mantle', ''),
-    'Conveyer Rollers' : SubCategory(
-        'Conveyer Rollers', 'Conveyer Rollers', '')
-
+    'Engine': SubCategory('Engine', 'Engine', 'images/rightmenu/engine.png'),
+    'GET': SubCategory('GET', 'GET', 'images/rightmenu/get.png'),
+    'Seals': SubCategory('Seals', 'Seals', 'images/rightmenu/seals.png'),
+    'Hydraulics': SubCategory('Hydraulics (Pump / Motor/ Gear Box)',
+        'Hydraulics', 'images/rightmenu/hydraulics.png'),
+    'UCG': SubCategory('UCG', 'UCG', 'images/rightmenu/ucg.png'),
+    'Filters': SubCategory('Filters', 'Filters', 'images/rightmenu/filter.png'),
+    'Lubricants': SubCategory('Lubricants', 'Lubricants', ''),
+    'Pin & Brushes': SubCategory(
+        'Pin & Brushes', 'Pin & Brushes', 'images/rightmenu/pin_bushes.png'),
+    'Others': SubCategory('Others', 'Others', 'images/rightmenu/others.png'),
+    'Wear Parts':
+        SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts', ''),
+    'Belts': SubCategory('Belts', 'Belts', ''),
+    'Cone Mantle': SubCategory('Cone Mantle', 'Cone Mantle', ''),
+    'Conveyer Rollers': SubCategory('Conveyer Rollers', 'Conveyer Rollers', '')
   };
 
   static Map<String, Category> topMenuItems = {
-    'Kobelco' : Category('Kobelco', ),
-    'Caterpillar' : Category('Caterpillar', icon:"images/topmenu/Cat.png"),
-    'Volvo' : Category('Volvo',icon:"images/topmenu/Volvo.png"),
-    'Komatsu' : Category('Komatsu', icon:"images/topmenu/Komatsu.png"),
-    'Tata Hitachi' : Category('Tata Hitachi', icon:"images/topmenu/Tata.png"),
-    'Hyundai' : Category('Hyundai', icon:"images/topmenu/Hyundai.png"),
-    'JCB' : Category('JCB', icon:"images/topmenu/JCB.png"),
-    'Sany' : Category('Sany', icon:"images/topmenu/Sany.png"),
-    'Tata' : Category('Tata', iconData:FontAwesomeIcons.house),
-    'Ashok Leyland' : Category('Ashok Leyland', iconData:FontAwesomeIcons.house),
-    'Benz' : Category('Benz', iconData:FontAwesomeIcons.house),
-    'Eicher' : Category('Eicher', iconData:FontAwesomeIcons.house),
-    'Scania / Ajax Fiori' : Category('Scania / Ajax Fiori', iconData:FontAwesomeIcons.house),
-    'Putzmister' : Category('Putzmister', iconData:FontAwesomeIcons.house),
-    'Schwing Stetter' : Category('Schwing Stetter', iconData:FontAwesomeIcons.house),
-    'Greaves Cotton' : Category('Greaves Cotton', iconData:FontAwesomeIcons.house),
-    'Puzzolona' : Category('Puzzolona', iconData:FontAwesomeIcons.house),
-    'Propel' : Category('Propel', iconData:FontAwesomeIcons.house),
-    'Metso' : Category('Metso', iconData:FontAwesomeIcons.house),
-    'Sandvik' : Category('Sandvik', iconData:FontAwesomeIcons.house),
-    'Writgen' : Category('Writgen', iconData:FontAwesomeIcons.house),
-    'Klemann' : Category('Klemann', iconData:FontAwesomeIcons.house),
-    'L&T' : Category('L&T', iconData:FontAwesomeIcons.house),
-    'Case' : Category('Case', iconData:FontAwesomeIcons.house),
-    'HAMM' : Category('HAMM', iconData:FontAwesomeIcons.house),
-    'IngersRoll Rand' : Category('IngersRoll Rand', iconData:FontAwesomeIcons.lockOpen),
-    'XCMG' : Category('XCMG', iconData:FontAwesomeIcons.house),
-    'Leeboy' : Category('Leeboy', iconData:FontAwesomeIcons.house),
-    'Liugong' : Category('Liugong', iconData:FontAwesomeIcons.house),
-    'BEML' : Category('BEML', iconData:FontAwesomeIcons.lockOpen)
-
+    'Kobelco': Category(
+      'Kobelco',
+    ),
+    'Caterpillar': Category('Caterpillar', icon: "images/topmenu/Cat.png"),
+    'Volvo': Category('Volvo', icon: "images/topmenu/Volvo.png"),
+    'Komatsu': Category('Komatsu', icon: "images/topmenu/Komatsu.png"),
+    'Tata Hitachi': Category('Tata Hitachi', icon: "images/topmenu/Tata.png"),
+    'Hyundai': Category('Hyundai', icon: "images/topmenu/Hyundai.png"),
+    'JCB': Category('JCB', icon: "images/topmenu/JCB.png"),
+    'Sany': Category('Sany', icon: "images/topmenu/Sany.png"),
+    'Tata': Category('Tata', iconData: FontAwesomeIcons.house),
+    'Ashok Leyland':
+        Category('Ashok Leyland', iconData: FontAwesomeIcons.house),
+    'Benz': Category('Benz', iconData: FontAwesomeIcons.house),
+    'Eicher': Category('Eicher', iconData: FontAwesomeIcons.house),
+    'Scania / Ajax Fiori':
+        Category('Scania / Ajax Fiori', iconData: FontAwesomeIcons.house),
+    'Putzmister': Category('Putzmister', iconData: FontAwesomeIcons.house),
+    'Schwing Stetter':
+        Category('Schwing Stetter', iconData: FontAwesomeIcons.house),
+    'Greaves Cotton':
+        Category('Greaves Cotton', iconData: FontAwesomeIcons.house),
+    'Puzzolona': Category('Puzzolona', iconData: FontAwesomeIcons.house),
+    'Propel': Category('Propel', iconData: FontAwesomeIcons.house),
+    'Metso': Category('Metso', iconData: FontAwesomeIcons.house),
+    'Sandvik': Category('Sandvik', iconData: FontAwesomeIcons.house),
+    'Writgen': Category('Writgen', iconData: FontAwesomeIcons.house),
+    'Klemann': Category('Klemann', iconData: FontAwesomeIcons.house),
+    'L&T': Category('L&T', iconData: FontAwesomeIcons.house),
+    'Case': Category('Case', iconData: FontAwesomeIcons.house),
+    'HAMM': Category('HAMM', iconData: FontAwesomeIcons.house),
+    'IngersRoll Rand':
+        Category('IngersRoll Rand', iconData: FontAwesomeIcons.lockOpen),
+    'XCMG': Category('XCMG', iconData: FontAwesomeIcons.house),
+    'Leeboy': Category('Leeboy', iconData: FontAwesomeIcons.house),
+    'Liugong': Category('Liugong', iconData: FontAwesomeIcons.house),
+    'BEML': Category('BEML', iconData: FontAwesomeIcons.lockOpen)
   };
 
   static PageController pageController =

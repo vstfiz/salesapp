@@ -20,7 +20,7 @@ class _SideBarState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: ColorPallete.sideBar,
       height: ScreenUtils.height,
       width: ScreenUtils.width / 23,
       child: ListView(

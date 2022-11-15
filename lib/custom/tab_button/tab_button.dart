@@ -42,7 +42,7 @@ class _SideBarTabState extends State<SideBarTab> {
              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(widget.icon,width: ScreenUtils.getWidth(26)),
+                Image.asset(widget.icon,width: ScreenUtils.getWidth(26),color: ColorPallete.sidebarIcon,),
                 SizedBox(height: 5.0,),
                 Text(
                   widget.title,

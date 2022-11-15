@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -97,113 +99,95 @@ class _WithCategoryState extends State<WithCategory> {
                     : Positioned(
                         top: 0.0,
                         child: Container(
-                          width: CurrentState.tabs[CurrentState.selectedIndex]
-                                  .categories.length *
-                              (2.5 + ScreenUtils.width / 23),
+                          width: ScreenUtils.width * 0.8,
                           height: ScreenUtils.width / 23,
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: List.generate(
-                                CurrentState.tabs[CurrentState.selectedIndex]
-                                    .categories.length, (index) {
-                              return Row(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () async {
-                                      setState(() {
-                                        CurrentState.selectedCategory =
-                                            CurrentState
-                                                .tabs[CurrentState
-                                                .selectedIndex]
-                                                .categories[index]
-                                                .name;
-                                      });
-                                      getCustomData(
+                          child: SingleChildScrollView(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: List.generate(
+                                  CurrentState.tabs[CurrentState.selectedIndex]
+                                      .categories.length, (index) {
+                                return GestureDetector(
+                                  onTap: () async {
+                                    setState(() {
+                                      CurrentState.selectedCategory =
                                           CurrentState
                                               .tabs[CurrentState
                                               .selectedIndex]
-                                              .title,
-                                          CurrentState.selectedCategory);
-                                    },
-                                    child: Container(
-                                      color: Colors.white,
-                                      child: HoverContainer(
-                                        color: CurrentState
-                                            .selectedCategory ==
-                                            CurrentState.tabs
-                                                .elementAt(CurrentState
-                                                .selectedIndex)
-                                                .categories[index]
-                                                .name
-                                            ? ColorPallete.hoveringBlue
-                                            .withAlpha(70)
-                                            : Color.fromARGB(
-                                            255, 252, 185, 0),
-                                        hoverColor: ColorPallete
-                                            .hoveringBlue
-                                            .withAlpha(70),
-                                        width: ScreenUtils.width / 23,
-                                        height: ScreenUtils.width / 23,
-                                        child: Column(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                          children: [
+                                              .categories[index]
+                                              .name;
+                                    });
+                                    getCustomData(
+                                        CurrentState
+                                            .tabs[CurrentState
+                                            .selectedIndex]
+                                            .title,
+                                        CurrentState.selectedCategory);
+                                  },
+                                  child: Container(
+                                    color: ColorPallete.topMenu,
+                                    child: HoverContainer(
+                                      hoverColor: ColorPallete
+                                          .hoveringBlue
+                                          .withAlpha(70),
+                                      width: ScreenUtils.width / 23,
+                                      height: ScreenUtils.width / 23,
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                        children: [
+                                          CurrentState
+                                              .tabs[CurrentState
+                                              .selectedIndex]
+                                              .categories[index].icon ==
+                                              ""
+                                              ? Text(
                                             CurrentState
                                                 .tabs[CurrentState
                                                 .selectedIndex]
-                                                .categories[index].icon ==
-                                                ""
-                                                ? Text(
-                                              CurrentState
-                                                  .tabs[CurrentState
-                                                  .selectedIndex]
-                                                  .categories[index]
-                                                  .name,
-                                              textAlign:
-                                              TextAlign.center,
-                                              style:  TextStyle(
-                                                  fontSize:
-                                                  12,
-                                                  fontWeight:
-                                                  FontWeight
-                                                      .w500,
-                                                  color:
-                                                  ColorPallete.midnightGreen,overflow: TextOverflow.clip),
-                                            )
-                                                : Image.asset(
-                                              CurrentState
-                                                  .tabs[CurrentState
-                                                  .selectedIndex]
-                                                  .categories[index]
-                                                  .icon,
-                                              width: ScreenUtils
-                                                  .width /
-                                                  25,
-                                            ),
+                                                .categories[index]
+                                                .name,
+                                            textAlign:
+                                            TextAlign.center,
+                                            style:  TextStyle(
+                                                fontSize:
+                                                12,
+                                                fontWeight:
+                                                FontWeight
+                                                    .w500,
+                                                color:
+                                                ColorPallete.satinSheenGold,overflow: TextOverflow.clip),
+                                          )
+                                              : Image.asset(
+                                            CurrentState
+                                                .tabs[CurrentState
+                                                .selectedIndex]
+                                                .categories[index]
+                                                .icon,
+                                            width: ScreenUtils
+                                                .width /
+                                                25,
+                                          ),
 
-                                            // Icon(
-                                            //         CurrentState
-                                            //             .tabs[CurrentState
-                                            //                 .selectedIndex]
-                                            //             .categories[index]
-                                            //             .iconData,
-                                            //         size: ScreenUtils
-                                            //             .getWidth(16),
-                                            //         color: ColorPallete
-                                            //             .satinSheenGold)
-                                          ],
-                                        ),
+                                          // Icon(
+                                          //         CurrentState
+                                          //             .tabs[CurrentState
+                                          //                 .selectedIndex]
+                                          //             .categories[index]
+                                          //             .iconData,
+                                          //         size: ScreenUtils
+                                          //             .getWidth(16),
+                                          //         color: ColorPallete
+                                          //             .satinSheenGold)
+                                        ],
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
-                                    width: 2.5,
-                                  )
-                                ],
-                              );
-                            }),
+                                );
+                              }),
+                            ),
                           ),
                         ),
                       ),
@@ -233,128 +217,124 @@ class _WithCategoryState extends State<WithCategory> {
                 isRightMenuVisible
                     ? Positioned(
                         right: 0.0,
-                        top: ScreenUtils.getHeight(100),
                         child: Container(
                           width: ScreenUtils.width / 23,
-                          height: ScreenUtils.height * 0.7,
-                          child: ListView(
-                            children: List.generate(
-                                CurrentState.tabs[CurrentState.selectedIndex]
-                                    .subCategories.length, (index) {
-                              return Column(
-                                children: [
-                                  GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          CurrentState.selectedSubCategory =
+                          height: ScreenUtils.height * 0.75,
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: List.generate(
+                                  CurrentState.tabs[CurrentState.selectedIndex]
+                                      .subCategories.length, (index) {
+                                return Column(
+                                  children: [
+                                    GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            CurrentState.selectedSubCategory =
+                                                CurrentState
+                                                    .tabs[CurrentState
+                                                    .selectedIndex]
+                                                    .subCategories[index]
+                                                    .codename ??
+                                                    'GET';
+                                          });
+                                          getCustomSubCategoryData(
                                               CurrentState
-                                                      .tabs[CurrentState
-                                                          .selectedIndex]
-                                                      .subCategories[index]
-                                                      .codename ??
-                                                  'GET';
-                                        });
-                                        getCustomSubCategoryData(
-                                            CurrentState
-                                                .tabs[
-                                                    CurrentState.selectedIndex]
-                                                .title
-                                                .toLowerCase(),
-                                            CurrentState.selectedCategory,
-                                            CurrentState.selectedSubCategory);
-                                      },
-                                      child: Container(
-                                        color: Colors.white,
-                                        child: HoverContainer(
-                                          color: CurrentState
-                                                      .selectedSubCategory ==
-                                                  CurrentState.tabs
-                                                      .elementAt(CurrentState
-                                                          .selectedIndex)
-                                                      .subCategories[index]
-                                                      .codename
-                                              ? ColorPallete.hoveringBlue
-                                                  .withOpacity(0.7)
-                                              : Colors.white,
-                                          hoverColor: ColorPallete.hoveringBlue
-                                              .withOpacity(0.7),
-                                          width: ScreenUtils.width / 23,
-                                          // height: ScreenUtils.width / 23,
-                                          child: Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                vertical:
-                                                    ScreenUtils.getHeight(10)),
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  CurrentState
-                                                              .tabs[CurrentState
-                                                                  .selectedIndex]
-                                                              .subCategories[
-                                                                  index]
-                                                              .icon ==
-                                                          ''
-                                                      ? 'images/rightmenu/others.png'
-                                                      : CurrentState
+                                                  .tabs[
+                                              CurrentState.selectedIndex]
+                                                  .title
+                                                  .toLowerCase(),
+                                              CurrentState.selectedCategory,
+                                              CurrentState.selectedSubCategory);
+                                        },
+                                        child: Container(
+                                          color: ColorPallete.rightMenu,
+                                          child: HoverContainer(
+                                            hoverColor: ColorPallete.hoveringBlue
+                                                .withOpacity(0.7),
+                                            width: ScreenUtils.width / 23,
+                                            // height: ScreenUtils.width / 23,
+                                            child: Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical:
+                                                  ScreenUtils.getHeight(10)),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                                children: [
+                                                  SizedBox(
+                                                    height: ScreenUtils.width / 50,
+                                                    width: ScreenUtils.getWidth(26),
+
+                                                    child: Image.asset(
+                                                      CurrentState
                                                           .tabs[CurrentState
-                                                              .selectedIndex]
+                                                          .selectedIndex]
+                                                          .subCategories[
+                                                      index]
+                                                          .icon ==
+                                                          ''
+                                                          ? 'images/rightmenu/others.png'
+                                                          : CurrentState
+                                                          .tabs[CurrentState
+                                                          .selectedIndex]
                                                           .subCategories[index]
                                                           .icon,
-                                                  width: ScreenUtils.width / 30,
-                                                  fit: BoxFit.scaleDown,
-                                                  height:
-                                                      ScreenUtils.width / 25,
-                                                ),
-                                                const SizedBox(
-                                                  height: 5.0,
-                                                ),
-                                                Text(
-                                                  CurrentState
-                                                      .tabs[CurrentState
-                                                          .selectedIndex]
-                                                      .subCategories[index]
-                                                      .name,
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      fontSize: CurrentState
-                                                                  .selectedSubCategory ==
-                                                              CurrentState
-                                                                  .tabs[CurrentState
-                                                                      .selectedIndex]
-                                                                  .subCategories[
-                                                                      index]
-                                                                  .codename
-                                                          ? 10
-                                                          : 11,
-                                                      fontWeight: CurrentState
-                                                                  .selectedSubCategory ==
-                                                              CurrentState
-                                                                  .tabs[CurrentState
-                                                                      .selectedIndex]
-                                                                  .subCategories[
-                                                                      index]
-                                                                  .codename
-                                                          ? FontWeight.w500
-                                                          : FontWeight.w400,
-                                                      color: ColorPallete
-                                                          .satinSheenGold),
-                                                )
-                                              ],
+                                                      color: ColorPallete.rightMenuIcon,
+                                                      fit: BoxFit.contain,
+
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 5.0,
+                                                  ),
+                                                  Text(
+                                                    CurrentState
+                                                        .tabs[CurrentState
+                                                        .selectedIndex]
+                                                        .subCategories[index]
+                                                        .codename,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        fontSize: CurrentState
+                                                            .selectedSubCategory ==
+                                                            CurrentState
+                                                                .tabs[CurrentState
+                                                                .selectedIndex]
+                                                                .subCategories[
+                                                            index]
+                                                                .codename
+                                                            ? 10
+                                                            : 11,
+                                                        fontWeight: CurrentState
+                                                            .selectedSubCategory ==
+                                                            CurrentState
+                                                                .tabs[CurrentState
+                                                                .selectedIndex]
+                                                                .subCategories[
+                                                            index]
+                                                                .codename
+                                                            ? FontWeight.w500
+                                                            : FontWeight.w400,
+                                                        color: ColorPallete
+                                                            .satinSheenGold),
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      )),
-                                  const SizedBox(
-                                    height: 1.5,
-                                  )
-                                ],
-                              );
-                            }),
-                          ),
+                                        )),
+                                    const SizedBox(
+                                      height: 1.5,
+                                    )
+                                  ],
+                                );
+                              }),
+                            ),
+                          )
                         ),
                       )
                     : const SizedBox(),
