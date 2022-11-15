@@ -79,8 +79,7 @@ class CurrentState {
         rightMenuItems['Engine']!,
         rightMenuItems['UCG']!,
         rightMenuItems['Filters']!,
-        rightMenuItems['Lubricants']!,
-        rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['Attachments']!,
         rightMenuItems['GET']!,
         rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
@@ -114,7 +113,7 @@ class CurrentState {
         rightMenuItems['Engine']!,
         rightMenuItems['Filters']!,
         rightMenuItems['Lubricants']!,
-        rightMenuItems['Pin & Brushes']!,
+        rightMenuItems['Attachments']!,
         rightMenuItems['GET']!,
         rightMenuItems['Seals']!,
         rightMenuItems['Others']!,
@@ -228,7 +227,7 @@ class CurrentState {
       ),
       index: 7,
       categories: [
-        topMenuItems['Puzzolona']!,
+        topMenuItems['Puzzolana']!,
         topMenuItems['Propel']!,
         topMenuItems['Metso']!,
         topMenuItems['Sandvik']!,
@@ -236,13 +235,10 @@ class CurrentState {
         topMenuItems['Klemann']!,
       ],
       subCategories: [
-        rightMenuItems['Wear Parts']!,
+        rightMenuItems['Liners']!,
         rightMenuItems['Belts']!,
         rightMenuItems['Cone Mantle']!,
         rightMenuItems['Conveyer Rollers']!,
-        rightMenuItems['Lubricants']!,
-        rightMenuItems['GET']!,
-        rightMenuItems['Seals']!,
       ],
     ),
     SideBarTab(
@@ -288,11 +284,11 @@ class CurrentState {
     'UCG': SubCategory('UCG', 'UCG', 'images/rightmenu/ucg.png'),
     'Filters': SubCategory('Filters', 'Filters', 'images/rightmenu/filter.png'),
     'Lubricants': SubCategory('Lubricants', 'Lubricants', ''),
-    'Pin & Brushes': SubCategory(
-        'Pin & Brushes', 'Pin & Brushes', 'images/rightmenu/pin_bushes.png'),
+    'Attachments': SubCategory(
+        'Attachments', 'Attachments', 'images/rightmenu/pin_bushes.png'),
     'Others': SubCategory('Others', 'Others', 'images/rightmenu/others.png'),
-    'Wear Parts':
-        SubCategory('Wear Parts (Liners / Jaw Plates)', 'Wear Parts', ''),
+    'Liners':
+        SubCategory('Liners (Liners / Jaw Plates)', 'Liners', ''),
     'Belts': SubCategory('Belts', 'Belts', ''),
     'Cone Mantle': SubCategory('Cone Mantle', 'Cone Mantle', ''),
     'Conveyer Rollers': SubCategory('Conveyer Rollers', 'Conveyer Rollers', '')
@@ -335,7 +331,7 @@ class CurrentState {
         Category('Schwing Stetter', iconData: FontAwesomeIcons.house),
     'Greaves Cotton':
         Category('Greaves Cotton', iconData: FontAwesomeIcons.house),
-    'Puzzolona': Category('Puzzolona', iconData: FontAwesomeIcons.house),
+    'Puzzolana': Category('Puzzolana', iconData: FontAwesomeIcons.house),
     'Propel': Category('Propel', iconData: FontAwesomeIcons.house),
     'Metso': Category('Metso', iconData: FontAwesomeIcons.house),
     'Sandvik': Category('Sandvik', iconData: FontAwesomeIcons.house),
