@@ -100,13 +100,13 @@ class _WithCategoryState extends State<WithCategory> {
                     ? const SizedBox()
                     : Positioned(
                         top: 0.0,
-                        right: 100,
+                        right: ScreenUtils.getWidth(100),
                         child: Container(
                           width: ScreenUtils.width * 0.36,
                           height: ScreenUtils.width / 23,
                           child: SingleChildScrollView(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: List.generate(
                                   CurrentState.tabs[CurrentState.selectedIndex]
                                       .categories.length, (index) {
@@ -129,6 +129,7 @@ class _WithCategoryState extends State<WithCategory> {
                                         CurrentState.selectedCategory);
                                   },
                                   child: Container(
+                                    margin: const EdgeInsets.symmetric(horizontal: 0.75),
                                     color: ColorPallete.topMenu,
                                     child: HoverContainer(
                                       color: imageList.topMenuSelectedIndex==index?ColorPallete.hoveringBlue.withOpacity(0.5):Colors.transparent,
