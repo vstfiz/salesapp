@@ -6,14 +6,15 @@ import 'HTTPService.dart';
 
 class ImageService {
   static ImageService? _instance;
-  static ImageService? getInstance()  {
+  static ImageService? getInstance() {
     _instance ??= ImageService();
     return _instance;
   }
+
   static Map<String, String> headers = {
     "Accept": "*/*",
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin":'*'
+    "Access-Control-Allow-Origin": '*'
   };
 
   static Future<List<ScreenImageMaster>> getImagesByScreenCode(
@@ -30,11 +31,13 @@ class ImageService {
     }
     return imageList;
   }
+
   static Future<List<ImageMaster>> getImagesByType(
       {required String type}) async {
-    Map<String, dynamic> parameters = {
-      "type": type
-    };
+    if (type == "trippers / \n transit mixers") {
+      type = "trippers";
+    }
+    Map<String, dynamic> parameters = {"type": type};
     GenericResponse response = await HTTPService.callApi(
         HttpRequestType.get, URL.getImageByType,
         params: parameters, headers: headers);
@@ -46,6 +49,7 @@ class ImageService {
     }
     return imageList;
   }
+
   static Future<List<ImageMaster>> getImagesByTypeAndCategory(
       {required String type, required String category}) async {
     Map<String, dynamic> parameters = {
