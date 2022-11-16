@@ -74,11 +74,9 @@ class _WithCategoryState extends State<WithCategory> {
                               width: ScreenUtils.width * 22 / 23,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: CachedNetworkImageProvider(
-                                        "https://corsanywhere.herokuapp.com/${i.imageUrl!}" ??
-                                              Images.bedroom,
-                                          headers: ImageService.headers,),
-                                      fit: BoxFit.cover)),
+                                      image: CachedNetworkImageProvider("https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,headers: ImageService.headers,maxHeight: ScreenUtils.height.toInt(),maxWidth: (ScreenUtils.width * 22) ~/ 23),
+
+                                      fit: BoxFit.fill)),
                             ),
                             Positioned(
                               bottom: ScreenUtils.getHeight(40),
@@ -162,7 +160,7 @@ class _WithCategoryState extends State<WithCategory> {
                                                 12,
                                                 fontWeight:
                                                 FontWeight
-                                                    .w500,
+                                                    .w400,
                                                 color:
                                                 ColorPallete.satinSheenGold,overflow: TextOverflow.clip),
                                           )
@@ -317,16 +315,7 @@ class _WithCategoryState extends State<WithCategory> {
                                                                 .codename
                                                             ? 10
                                                             : 11,
-                                                        fontWeight: CurrentState
-                                                            .selectedSubCategory ==
-                                                            CurrentState
-                                                                .tabs[CurrentState
-                                                                .selectedIndex]
-                                                                .subCategories[
-                                                            index]
-                                                                .codename
-                                                            ? FontWeight.w500
-                                                            : FontWeight.w400,
+                                                        fontWeight: FontWeight.w400,
                                                         color: ColorPallete
                                                             .satinSheenGold),
                                                   )
