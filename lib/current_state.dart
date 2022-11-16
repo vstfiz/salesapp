@@ -24,6 +24,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/home.png",
       title: 'Homepage',
+      apiCode: 'Homepage',
       hasChild: false,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -39,6 +40,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/offers.png",
       title: 'Offers',
+      apiCode: 'Offers',
       hasChild: false,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -54,6 +56,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Excavator.png",
       title: 'Excavator',
+      apiCode: 'Excavator',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -88,6 +91,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/backloader.png",
       title: 'Loaders',
+      apiCode: 'Loaders',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -122,6 +126,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Grader.png",
       title: 'Grader',
+      apiCode: 'Grader',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -154,6 +159,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Bulldozer.png",
       title: 'Dozer',
+      apiCode: 'Dozer',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -183,6 +189,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Roller.png",
       title: 'Rollers',
+      apiCode: 'Rollers',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -216,6 +223,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Crusher.png",
       title: 'Crushers',
+      apiCode: 'Crushers',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,
@@ -244,6 +252,7 @@ class CurrentState {
     SideBarTab(
       icon: "images/sidebar/Tipper.png",
       title: 'Trippers / \n Transit Mixers',
+      apiCode: 'trippers',
       hasChild: true,
       height: ScreenUtils.width / 23,
       width: ScreenUtils.width / 23,

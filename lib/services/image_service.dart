@@ -34,9 +34,6 @@ class ImageService {
 
   static Future<List<ImageMaster>> getImagesByType(
       {required String type}) async {
-    if (type == "trippers / \n transit mixers") {
-      type = "trippers";
-    }
     Map<String, dynamic> parameters = {"type": type};
     GenericResponse response = await HTTPService.callApi(
         HttpRequestType.get, URL.getImageByType,

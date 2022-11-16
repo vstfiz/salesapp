@@ -34,14 +34,14 @@ class _SideBarState extends State<SideBar> {
 
               });
               if(index == 0 || index == 1){
-                await Provider.of<ImageListProvider>(context,listen: false).getScreenImageMasterList(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
+                await Provider.of<ImageListProvider>(context,listen: false).getScreenImageMasterList(CurrentState.tabs[CurrentState.selectedIndex].apiCode.toLowerCase());
                 CurrentState.pageController.jumpToPage(0);
               }
               else{
                 CurrentState.pageController.jumpToPage(1);
                 // CurrentState.selectedCategory = CurrentState.tabs[index].categories[0].name;
                 // CurrentState.selectedSubCategory = 'GET';
-                await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByType(CurrentState.tabs[CurrentState.selectedIndex].title.toLowerCase());
+                await Provider.of<ImageListProvider>(context,listen: false).getImageMasterListByType(CurrentState.tabs[CurrentState.selectedIndex].apiCode.toLowerCase());
 
               }
 
@@ -49,6 +49,7 @@ class _SideBarState extends State<SideBar> {
             child: SideBarTab(
               icon: CurrentState.tabs[index].icon,
               title: CurrentState.tabs[index].title,
+              apiCode: CurrentState.tabs[index].apiCode,
               hasChild: CurrentState.tabs[index].hasChild,
               height: ScreenUtils.width / 23,
               width: ScreenUtils.width / 23,

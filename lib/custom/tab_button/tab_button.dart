@@ -13,6 +13,7 @@ class SideBarTab extends StatefulWidget {
   final String icon;
   final int index;
   final String title;
+  final String apiCode;
   final bool hasChild;
   final double height;
   final double width;
@@ -21,7 +22,7 @@ class SideBarTab extends StatefulWidget {
   final List<SubCategory> subCategories;
 
   const SideBarTab(
-      {super.key,required this.index,  this.icon="", required this.title, required this.hasChild, required this.height, required this.width, required this.textStyle, required this.categories, required this.subCategories});
+      {super.key,required this.index,  this.icon="", required this.title, required this.hasChild, required this.height, required this.width, required this.textStyle, required this.categories, required this.subCategories, required this.apiCode});
 
   @override
   _SideBarTabState createState()=> _SideBarTabState();
