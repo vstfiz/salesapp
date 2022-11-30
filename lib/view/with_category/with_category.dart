@@ -74,7 +74,7 @@ class _WithCategoryState extends State<WithCategory> {
                               width: ScreenUtils.width * 22 / 23,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image: CachedNetworkImageProvider("https://corsanywhere.herokuapp.com/${i.imageUrl!}" ?? Images.bedroom,headers: ImageService.headers,maxHeight: ScreenUtils.height.toInt(),maxWidth: (ScreenUtils.width * 22) ~/ 23),
+                                      image: CachedNetworkImageProvider("${i.imageUrl!}" ?? Images.bedroom,headers: ImageService.headers,maxHeight: ScreenUtils.height.toInt(),maxWidth: (ScreenUtils.width * 22) ~/ 23),
 
                                       fit: BoxFit.fill)),
                             ),
