@@ -239,14 +239,15 @@ class CurrentState {
         topMenuItems['Propel']!,
         topMenuItems['Metso']!,
         topMenuItems['Sandvik']!,
-        topMenuItems['Writgen']!,
-        topMenuItems['Klemann']!,
+        topMenuItems['Nawa']!,
+        // topMenuItems['Klemann']!,
       ],
       subCategories: [
         rightMenuItems['Liners']!,
-        rightMenuItems['Belts']!,
-        rightMenuItems['Cone Mantle']!,
-        rightMenuItems['Conveyer Rollers']!,
+        rightMenuItems['Backing Component']!,
+        rightMenuItems['Lubs']!,
+        rightMenuItems['Metal detector']!,
+        rightMenuItems['Conveyer Belts']!
       ],
     ),
     SideBarTab(
@@ -296,11 +297,12 @@ class CurrentState {
     'Attachments': SubCategory(
         'Attachments', 'Attachments', 'images/rightmenu/pin_bushes.png'),
     'Others': SubCategory('Others', 'Others', 'images/rightmenu/others.png'),
-    'Liners':
-        SubCategory('Liners (Liners / Jaw Plates)', 'Liners', ''),
-    'Belts': SubCategory('Belts', 'Belts', ''),
-    'Cone Mantle': SubCategory('Cone Mantle', 'Cone Mantle', ''),
-    'Conveyer Rollers': SubCategory('Conveyer Rollers', 'Conveyer Rollers', '')
+    'Liners': SubCategory('Liners (Liners / Jaw Plates)', 'Liners', ''),
+    'Backing Component':
+        SubCategory('Backing Component', 'Backing Component', ''),
+    'Lubs': SubCategory('Lubs', 'Lubs', ''),
+    'Metal detector': SubCategory('Metal detector', 'Metal detector', ''),
+    'Conveyer Belts': SubCategory('Conveyer Belts', 'Conveyer Belts', '')
   };
 
   static Map<String, Category> topMenuItems = {
@@ -344,7 +346,7 @@ class CurrentState {
     'Propel': Category('Propel', iconData: FontAwesomeIcons.house),
     'Metso': Category('Metso', iconData: FontAwesomeIcons.house),
     'Sandvik': Category('Sandvik', iconData: FontAwesomeIcons.house),
-    'Writgen': Category('Writgen', iconData: FontAwesomeIcons.house),
+    'Nawa': Category('Nawa', iconData: FontAwesomeIcons.house),
     'Klemann': Category('Klemann', iconData: FontAwesomeIcons.house),
     'L&T': Category('L&T', iconData: FontAwesomeIcons.house),
     'Case': Category('Case', iconData: FontAwesomeIcons.house),
